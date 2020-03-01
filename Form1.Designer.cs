@@ -35,7 +35,6 @@
             this.Box_For_q = new System.Windows.Forms.TextBox();
             this.OpenKey = new System.Windows.Forms.TextBox();
             this.ClosedKey = new System.Windows.Forms.TextBox();
-            this.Refresh = new System.Windows.Forms.Button();
             this.label_User1 = new System.Windows.Forms.Label();
             this.label_User2 = new System.Windows.Forms.Label();
             this.label_User3 = new System.Windows.Forms.Label();
@@ -48,17 +47,23 @@
             this.Person2_D = new System.Windows.Forms.Label();
             this.Person3_E = new System.Windows.Forms.Label();
             this.Person3_D = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.StartAlghorytm = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.SurnamePerson1 = new System.Windows.Forms.TextBox();
             this.SurnamePerson2 = new System.Windows.Forms.TextBox();
             this.SurnamePerson3 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.StartAlghorytm = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Reup_button = new System.Windows.Forms.Button();
+            this.let1 = new System.Windows.Forms.Label();
+            this.let2 = new System.Windows.Forms.Label();
+            this.let3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +76,7 @@
             this.FindKeys.TabIndex = 2;
             this.FindKeys.Text = "Найти пару ключей";
             this.FindKeys.UseVisualStyleBackColor = true;
-            this.FindKeys.Click += new System.EventHandler(this.FindKeys_Click);
+            this.FindKeys.Click += new System.EventHandler(this.FindKeys_Click_1);
             // 
             // p_label
             // 
@@ -119,16 +124,6 @@
             this.ClosedKey.Size = new System.Drawing.Size(100, 20);
             this.ClosedKey.TabIndex = 8;
             // 
-            // Refresh
-            // 
-            this.Refresh.Location = new System.Drawing.Point(37, 195);
-            this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(184, 23);
-            this.Refresh.TabIndex = 9;
-            this.Refresh.Text = "Обновить пару с тем же N";
-            this.Refresh.UseVisualStyleBackColor = true;
-            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
-            // 
             // label_User1
             // 
             this.label_User1.AutoSize = true;
@@ -141,7 +136,7 @@
             // label_User2
             // 
             this.label_User2.AutoSize = true;
-            this.label_User2.Location = new System.Drawing.Point(101, 0);
+            this.label_User2.Location = new System.Drawing.Point(100, 0);
             this.label_User2.Name = "label_User2";
             this.label_User2.Size = new System.Drawing.Size(35, 13);
             this.label_User2.TabIndex = 11;
@@ -150,7 +145,7 @@
             // label_User3
             // 
             this.label_User3.AutoSize = true;
-            this.label_User3.Location = new System.Drawing.Point(160, 0);
+            this.label_User3.Location = new System.Drawing.Point(159, 0);
             this.label_User3.Name = "label_User3";
             this.label_User3.Size = new System.Drawing.Size(35, 13);
             this.label_User3.TabIndex = 12;
@@ -162,7 +157,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.54546F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
             this.tableLayoutPanel1.Controls.Add(this.label_User3, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_User2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_User1, 1, 0);
@@ -226,7 +221,7 @@
             // Person2_E
             // 
             this.Person2_E.AutoSize = true;
-            this.Person2_E.Location = new System.Drawing.Point(101, 28);
+            this.Person2_E.Location = new System.Drawing.Point(100, 28);
             this.Person2_E.Name = "Person2_E";
             this.Person2_E.Size = new System.Drawing.Size(14, 13);
             this.Person2_E.TabIndex = 17;
@@ -235,7 +230,7 @@
             // Person2_D
             // 
             this.Person2_D.AutoSize = true;
-            this.Person2_D.Location = new System.Drawing.Point(101, 52);
+            this.Person2_D.Location = new System.Drawing.Point(100, 52);
             this.Person2_D.Name = "Person2_D";
             this.Person2_D.Size = new System.Drawing.Size(15, 13);
             this.Person2_D.TabIndex = 18;
@@ -244,7 +239,7 @@
             // Person3_E
             // 
             this.Person3_E.AutoSize = true;
-            this.Person3_E.Location = new System.Drawing.Point(160, 28);
+            this.Person3_E.Location = new System.Drawing.Point(159, 28);
             this.Person3_E.Name = "Person3_E";
             this.Person3_E.Size = new System.Drawing.Size(14, 13);
             this.Person3_E.TabIndex = 19;
@@ -253,21 +248,54 @@
             // Person3_D
             // 
             this.Person3_D.AutoSize = true;
-            this.Person3_D.Location = new System.Drawing.Point(160, 52);
+            this.Person3_D.Location = new System.Drawing.Point(159, 52);
             this.Person3_D.Name = "Person3_D";
             this.Person3_D.Size = new System.Drawing.Size(15, 13);
             this.Person3_D.TabIndex = 20;
             this.Person3_D.Text = "D";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(47, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(100, 75);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(53, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(159, 75);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(72, 23);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
             this.tableLayoutPanel2.Controls.Add(this.SurnamePerson1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.SurnamePerson2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.SurnamePerson3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.let1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.let2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.let3, 2, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(267, 79);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
@@ -277,6 +305,33 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(303, 139);
             this.tableLayoutPanel2.TabIndex = 14;
+            // 
+            // SurnamePerson1
+            // 
+            this.SurnamePerson1.Location = new System.Drawing.Point(3, 3);
+            this.SurnamePerson1.MaxLength = 1;
+            this.SurnamePerson1.Name = "SurnamePerson1";
+            this.SurnamePerson1.Size = new System.Drawing.Size(100, 20);
+            this.SurnamePerson1.TabIndex = 0;
+            this.SurnamePerson1.TextChanged += new System.EventHandler(this.SurnamePerson1_TextChanged);
+            // 
+            // SurnamePerson2
+            // 
+            this.SurnamePerson2.Location = new System.Drawing.Point(109, 3);
+            this.SurnamePerson2.MaxLength = 1;
+            this.SurnamePerson2.Name = "SurnamePerson2";
+            this.SurnamePerson2.Size = new System.Drawing.Size(100, 20);
+            this.SurnamePerson2.TabIndex = 1;
+            this.SurnamePerson2.TextChanged += new System.EventHandler(this.SurnamePerson2_TextChanged);
+            // 
+            // SurnamePerson3
+            // 
+            this.SurnamePerson3.Location = new System.Drawing.Point(215, 3);
+            this.SurnamePerson3.MaxLength = 1;
+            this.SurnamePerson3.Name = "SurnamePerson3";
+            this.SurnamePerson3.Size = new System.Drawing.Size(85, 20);
+            this.SurnamePerson3.TabIndex = 2;
+            this.SurnamePerson3.TextChanged += new System.EventHandler(this.SurnamePerson3_TextChanged);
             // 
             // label1
             // 
@@ -302,39 +357,9 @@
             this.StartAlghorytm.Name = "StartAlghorytm";
             this.StartAlghorytm.Size = new System.Drawing.Size(303, 23);
             this.StartAlghorytm.TabIndex = 17;
-            this.StartAlghorytm.Text = "Перенести данные для вычислений";
+            this.StartAlghorytm.Text = "Начать алгоритм";
             this.StartAlghorytm.UseVisualStyleBackColor = true;
             this.StartAlghorytm.Click += new System.EventHandler(this.StartAlghorytm_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(160, 75);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 23);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(101, 75);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(47, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label3
             // 
@@ -346,42 +371,75 @@
             this.label3.Text = "Введите буквы фамилии";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SurnamePerson1
+            // Reup_button
             // 
-            this.SurnamePerson1.Location = new System.Drawing.Point(3, 3);
-            this.SurnamePerson1.MaxLength = 1;
-            this.SurnamePerson1.Name = "SurnamePerson1";
-            this.SurnamePerson1.Size = new System.Drawing.Size(100, 20);
-            this.SurnamePerson1.TabIndex = 0;
+            this.Reup_button.Location = new System.Drawing.Point(37, 188);
+            this.Reup_button.Name = "Reup_button";
+            this.Reup_button.Size = new System.Drawing.Size(184, 29);
+            this.Reup_button.TabIndex = 18;
+            this.Reup_button.Text = "Обновить ключи";
+            this.Reup_button.UseVisualStyleBackColor = true;
+            this.Reup_button.Click += new System.EventHandler(this.ReUp_Click);
             // 
-            // SurnamePerson2
+            // let1
             // 
-            this.SurnamePerson2.Location = new System.Drawing.Point(109, 3);
-            this.SurnamePerson2.MaxLength = 1;
-            this.SurnamePerson2.Name = "SurnamePerson2";
-            this.SurnamePerson2.Size = new System.Drawing.Size(100, 20);
-            this.SurnamePerson2.TabIndex = 1;
+            this.let1.AutoSize = true;
+            this.let1.Location = new System.Drawing.Point(3, 23);
+            this.let1.Name = "let1";
+            this.let1.Size = new System.Drawing.Size(40, 13);
+            this.let1.TabIndex = 3;
+            this.let1.Text = "Letter1";
             // 
-            // SurnamePerson3
+            // let2
             // 
-            this.SurnamePerson3.Location = new System.Drawing.Point(215, 3);
-            this.SurnamePerson3.MaxLength = 1;
-            this.SurnamePerson3.Name = "SurnamePerson3";
-            this.SurnamePerson3.Size = new System.Drawing.Size(85, 20);
-            this.SurnamePerson3.TabIndex = 2;
+            this.let2.AutoSize = true;
+            this.let2.Location = new System.Drawing.Point(109, 23);
+            this.let2.Name = "let2";
+            this.let2.Size = new System.Drawing.Size(35, 13);
+            this.let2.TabIndex = 4;
+            this.let2.Text = "label5";
+            // 
+            // let3
+            // 
+            this.let3.AutoSize = true;
+            this.let3.Location = new System.Drawing.Point(215, 23);
+            this.let3.Name = "let3";
+            this.let3.Size = new System.Drawing.Size(35, 13);
+            this.let3.TabIndex = 5;
+            this.let3.Text = "label6";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(295, 245);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(298, 275);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "label5";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 439);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Reup_button);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.StartAlghorytm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.Refresh);
             this.Controls.Add(this.ClosedKey);
             this.Controls.Add(this.OpenKey);
             this.Controls.Add(this.Box_For_q);
@@ -408,7 +466,6 @@
         private System.Windows.Forms.TextBox Box_For_q;
         private System.Windows.Forms.TextBox OpenKey;
         private System.Windows.Forms.TextBox ClosedKey;
-        private System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.Label label_User1;
         private System.Windows.Forms.Label label_User2;
         private System.Windows.Forms.Label label_User3;
@@ -432,6 +489,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button StartAlghorytm;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Reup_button;
+        private System.Windows.Forms.Label let1;
+        private System.Windows.Forms.Label let2;
+        private System.Windows.Forms.Label let3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
